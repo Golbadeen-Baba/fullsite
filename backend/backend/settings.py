@@ -23,9 +23,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-@2-l59s61-z!8zd_0=akq&z9rv@5h=ml_m1bm3_vh(fetgc+js'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'sipp.bigboysmedia.com',      
+    'backend.sipp.bigboysmedia.com', 
+]
 
 
 # Application definition
@@ -129,5 +132,5 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",
+    "https://sipp.bigboysmedia.com",
 ]
