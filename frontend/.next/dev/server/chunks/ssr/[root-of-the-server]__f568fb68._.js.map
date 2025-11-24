@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 18, "column": 0}, "map": {"version":3,"sources":["file:///D:/web%20projects/react%20work/fullstack/frontend/libs/getbooks.js"],"sourcesContent":["import React from \"react\";\r\n\r\nconst getbooks = async () => {\r\n  const url = \"http://127.0.0.1:8000/api/books\";\r\n  const res = await fetch(url);\r\n  const data = await res.json();\r\n  return data;\r\n};\r\n\r\nexport default getbooks;\r\n"],"names":[],"mappings":";;;;AAAA;;AAEA,MAAM,WAAW;IACf,MAAM,MAAM;IACZ,MAAM,MAAM,MAAM,MAAM;IACxB,MAAM,OAAO,MAAM,IAAI,IAAI;IAC3B,OAAO;AACT;uCAEe"}},
+    {"offset": {"line": 35, "column": 0}, "map": {"version":3,"sources":["file:///D:/web%20projects/react%20work/fullstack/frontend/app/page.js"],"sourcesContent":["import Image from \"next/image\";\nimport getbooks from \"@/libs/getbooks\";\n\n\nexport default async function Home() {\n  const books = await getbooks();\n  return (\n    <div className=\"flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black\">\n      <ul>\n        {\n          books.map(book => {\n            return (\n              <li key={book.id}>\n                <h1>{book.title}</h1>\n              </li>\n            )\n          })\n        }\n      </ul>\n    </div>\n  );\n}\n"],"names":[],"mappings":";;;;;AAAA;AACA;;;;AAGe,eAAe;IAC5B,MAAM,QAAQ,MAAM,IAAA,2HAAQ;IAC5B,qBACE,8OAAC;QAAI,WAAU;kBACb,cAAA,8OAAC;sBAEG,MAAM,GAAG,CAAC,CAAA;gBACR,qBACE,8OAAC;8BACC,cAAA,8OAAC;kCAAI,KAAK,KAAK;;;;;;mBADR,KAAK,EAAE;;;;;YAIpB;;;;;;;;;;;AAKV"}}]
+}
